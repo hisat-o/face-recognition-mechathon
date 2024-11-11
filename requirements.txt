@@ -6,4 +6,4 @@ mtcnn==0.1.1
 scipy==1.11.3
 Werkzeug==2.3.7
 gunicorn
-tensorflow
+tensorflow==2.18.0
