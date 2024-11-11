@@ -1,0 +1,17 @@
+# render.yaml
+
+services:
+  - name: face-recognition-app
+    type: web
+    env: python
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    staticPublishPath: static
+    disk:
+      name: persistent_storage
+      mountPath: /static/uploads
+      sizeGB: 1
